@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.2);
+      border-color: #666;
+    }
+
+    .slideshow {
+      max-width: 600px;
+      margin: 40px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .slides {
+      display: flex;
+      width: 400%;
+      animation: slide 12s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0%   { transform: translateX(0%); }
+      25%  { transform: translateX(-100%); }
+      50%  { transform: translateX(-200%); }
+      75%  { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Image Gallery (Click Thumbnails)</h2>
+  <div class="gallery">
+    <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-cd88-61f8-bc2d-1bf4b1edcfc9/raw?se=2025-06-15T15%3A12%3A13Z&sp=r&sv=2024-08-04&sr=b&scid=762243d4-6aea-5f75-acde-962e585df280&skoid=b64a43d9-3512-45c2-98b4-dea55d094240&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-15T12%3A25%3A17Z&ske=2025-06-16T12%3A25%3A17Z&sks=b&skv=2024-08-04&sig=r3CdpPTXENYzUMDVEKiU1ZLv70SvAsY3BVLqJ494YLk%3D" alt="Image 1">
+    <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-3d58-6230-91ca-3d67597386cc/raw?se=2025-06-15T15%3A18%3A20Z&sp=r&sv=2024-08-04&sr=b&scid=96955aaf-220d-5620-aaac-c43d074c31da&skoid=b64a43d9-3512-45c2-98b4-dea55d094240&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-14T21%3A44%3A00Z&ske=2025-06-15T21%3A44%3A00Z&sks=b&skv=2024-08-04&sig=5IHKmV2K3vRtGjumwTEIX1jGoyXHD4noyM/5jkrwPE0%3D" alt="Image 2">
+    <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-2ab8-61f8-84ca-e9f5d7b50a7a/raw?se=2025-06-15T15%3A01%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=673af506-fc3d-57c2-a484-f3f1fc03dd0d&skoid=9ccea605-1409-4478-82eb-9c83b25dc1b0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-15T01%3A45%3A32Z&ske=2025-06-16T01%3A45%3A32Z&sks=b&skv=2024-08-04&sig=ONkfkaGTiJwiPDJcv0wgszbqrK9DpLVnP77lsAOeQ1k%3D" alt="Image 3">
+  </div>
+
+  <h2>🎞️ Auto Slideshow</h2>
+  <div class="slideshow">
+    <div class="slides">
+        <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-cd88-61f8-bc2d-1bf4b1edcfc9/raw?se=2025-06-15T15%3A12%3A13Z&sp=r&sv=2024-08-04&sr=b&scid=762243d4-6aea-5f75-acde-962e585df280&skoid=b64a43d9-3512-45c2-98b4-dea55d094240&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-15T12%3A25%3A17Z&ske=2025-06-16T12%3A25%3A17Z&sks=b&skv=2024-08-04&sig=r3CdpPTXENYzUMDVEKiU1ZLv70SvAsY3BVLqJ494YLk%3D" alt="Slide 1">
+      <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-3d58-6230-91ca-3d67597386cc/raw?se=2025-06-15T15%3A18%3A20Z&sp=r&sv=2024-08-04&sr=b&scid=96955aaf-220d-5620-aaac-c43d074c31da&skoid=b64a43d9-3512-45c2-98b4-dea55d094240&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-14T21%3A44%3A00Z&ske=2025-06-15T21%3A44%3A00Z&sks=b&skv=2024-08-04&sig=5IHKmV2K3vRtGjumwTEIX1jGoyXHD4noyM/5jkrwPE0%3D" alt="Slide 2">
+      <img src="" alt="Slide 2">
+      <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-2ab8-61f8-84ca-e9f5d7b50a7a/raw?se=2025-06-15T15%3A01%3A58Z&sp=r&sv=2024-08-04&sr=b&scid=673af506-fc3d-57c2-a484-f3f1fc03dd0d&skoid=9ccea605-1409-4478-82eb-9c83b25dc1b0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-15T01%3A45%3A32Z&ske=2025-06-16T01%3A45%3A32Z&sks=b&skv=2024-08-04&sig=ONkfkaGTiJwiPDJcv0wgszbqrK9DpLVnP77lsAOeQ1k%3D" alt="Slide 3">
+    </div>
+  </div>
+
+</body>
+</html>
